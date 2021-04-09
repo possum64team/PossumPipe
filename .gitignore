@@ -1,0 +1,6 @@
+build/
+lib/
+__pycache__/
+temp/
+temp_*/
+dist/
