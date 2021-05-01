@@ -1,5 +1,4 @@
-print("Baaah")
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import mpv
 import sys
 
@@ -14,9 +13,9 @@ class Test(QMainWindow):
         self.container.setAttribute(Qt.WA_DontCreateNativeAncestors)
         self.container.setAttribute(Qt.WA_NativeWindow)
         player = mpv.MPV(wid=str(int(self.container.winId())),
-                vo='x11', # You may not need this
-                log_handler=print,
-                loglevel='debug')
+                vo='x11' )# You may not need this
+                #log_handler=print,
+                #loglevel='debug')
         player.play('https://youtu.be/ej9N6cJovwQ')
 
 app = QApplication(sys.argv)

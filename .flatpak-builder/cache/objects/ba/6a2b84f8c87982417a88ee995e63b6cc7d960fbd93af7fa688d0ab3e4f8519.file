@@ -1,0 +1,4 @@
+[Application]
+name=com.possum64.possumpipe
+runtime=org.kde.Platform/x86_64/5.15
+sdk=org.kde.Sdk/x86_64/5.15
