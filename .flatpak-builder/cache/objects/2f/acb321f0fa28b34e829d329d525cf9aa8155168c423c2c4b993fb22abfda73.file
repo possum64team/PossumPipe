@@ -1,8 +1,0 @@
-{
-  "id" : "com.possum64.possumpipe",
-  "runtime" : "org.kde.Platform",
-  "runtime-version" : "5.15",
-  "runtime-commit" : "d8315965a89d63491339aa3fa827460a208d4cb702e01de32416d03faced960c",
-  "sdk" : "org.kde.Sdk",
-  "sdk-commit" : "035b403355e007f5bf7784baec4875935f9173d7cc47ed838718196eb27f3ec3"
-}

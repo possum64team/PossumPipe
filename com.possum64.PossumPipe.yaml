@@ -2,12 +2,20 @@ app-id: com.possum64.possumpipe
 runtime: org.kde.Platform
 runtime-version: '5.15'
 sdk: org.kde.Sdk
-buildsystem: simple
-command: ./main.py
-ensure-writable:
-   /lib/python3.8/site-packages/
-build-commands:
-    python setup.py install --prefix=/app . 
-sources:
-    type: file
-    path: main.py
+command: /app/possumpipe/main.py
+modules:
+  - name: possumpipe  
+    buildsystem: simple
+    ensure-writable: 
+      - /lib/python3.8/site-packages/
+    build-commands:
+      - mkdir /app/possumpipe
+      - cp /run/build/possumpipe/main.py /app/possumpipe/main.py
+      - chmod ugo+x /app/possumpipe/main.py
+    sources:
+      - type: file
+        path: src/main.py
+      - type: file
+        path: setup.py
+      - type: file
+        path: README.md

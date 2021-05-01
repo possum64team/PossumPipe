@@ -1,0 +1,11 @@
+[Application]
+name=com.possum64.possumpipe
+runtime=org.kde.Platform/x86_64/5.15
+sdk=org.kde.Sdk/x86_64/5.15
+command=/app/possumpipe/main.py
+
+[Context]
+filesystems=xdg-config/kdeglobals:ro;
+
+[Session Bus Policy]
+com.canonical.AppMenu.Registrar=talk
