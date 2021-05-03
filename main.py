@@ -13,10 +13,7 @@ class Test(QMainWindow):
         self.setCentralWidget(self.container)
         self.container.setAttribute(Qt.WA_DontCreateNativeAncestors)
         self.container.setAttribute(Qt.WA_NativeWindow)
-        player = mpv.MPV(wid=str(int(self.container.winId())),
-                vo='x11', # You may not need this
-                log_handler=print,
-                loglevel='debug')
+        player = mpv.MPV(wid=str(int(self.container.winId())), vo='gpu')
         player.play('https://youtu.be/ej9N6cJovwQ')
 
 app = QApplication(sys.argv)
@@ -58,7 +55,3 @@ ydl_opts = {
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 	ydl.download(['https://youtu.be/ej9N6cJovwQ'])
 """
-
-
-
-
